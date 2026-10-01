@@ -1,0 +1,24 @@
+doctype html
+html(lang="en")
+    head
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        .form-wrapper
+            a(href="/") Return to the homepage
+            h1 Create New Custom Object Record
+            form(method="POST" action="/update-cobj")
+                label(for="name") Name:
+                input(type="text" name="name" id="name" required)
+
+                label(for="description") Description:
+                input(type="text" name="description" id="description" required)
+
+                label(for="tool") Tool:
+                select(name="tool" id="tool" required)
+                    option(value="Make") Make
+                    option(value="n8n") n8n
+                    option(value="HubSpot Workflows") HubSpot Workflows
+
+                input(type="submit" value="Submit")
