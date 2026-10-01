@@ -1,0 +1,22 @@
+doctype html
+html(lang="en")
+    head
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        .table-wrapper
+            h1 Custom Object Table
+            a(href="/update-cobj") Add to this table
+            table
+                thead
+                    tr
+                        th Name
+                        th Description
+                        th Tool
+                tbody
+                    each item in data
+                        tr
+                            td #{item.properties.name}
+                            td #{item.properties.description}
+                            td #{item.properties.tool}
